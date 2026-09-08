@@ -1,0 +1,4 @@
+File counts in ../command-line:
+.txt files: 6
+.sh files: 0
+.c files: 0

@@ -1,0 +1,39 @@
+/workspaces/aliosystems/command-line
+├── advanced-log.txt
+├── command-line-easy
+├── easy-log.txt
+├── hello-copy.txt
+├── intermediate-log.txt
+├── secret.txt
+└── test.txt
+
+2 directories, 6 files
+
+=== Automated directory listing ===
+Listing command-line:
+advanced-log.txt
+command-line-easy
+easy-log.txt
+hello-copy.txt
+intermediate-log.txt
+secret.txt
+test.txt
+Listing shell-scripts:
+easy-greet.sh
+file-check.sh
+file-count.sh
+project.sh
+Listing c-programs:
+add
+add.c
+advanced-c
+advanced-c.c
+command-line
+contacts
+contacts.c
+easy-c
+easy-c.c
+factorial
+factorial.c
+intermediate-c
+intermediate-c.c

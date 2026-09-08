@@ -1,0 +1,41 @@
+objdump answers (from running objdump -x -d words)
+
+1) What file format is used for this binary? And what architecture is it
+compiled for?
+
+The very first line says:
+words:     file format elf64-x86-64
+architecture: i386:x86-64
+
+So it's a 64 bit ELF file built for x86-64.
+
+2) What are some of the names of the segments/sections you find?
+
+Some of the sections I saw:
+.interp, .note.ABI-tag, .dynsym, .dynstr, .init, .plt, .text, .fini,
+.rodata, .eh_frame, .dynamic, .got, .data, .bss, .comment, and a bunch
+of .debug_* sections that are there because I compiled with -g.
+
+The main ones I care about are .text (the code), .rodata (constants like
+my printf strings), .data (initialized globals) and .bss (uninitialized
+globals).
+
+3) What section contains main and what is the address of main?
+
+main is in the .text section. In the disassembly it shows up as:
+00000000000013c7 <main>:
+
+That looks different from the 0x5555555553c7 gdb printed, but it's
+actually the same thing. The binary is position independent, so objdump
+only shows the offset inside the file. When the program runs, the loader
+puts it at a base address (0x555555554000 with ASLR turned off in gdb),
+and base + 0x13c7 = 0x5555555553c7. So they match.
+
+4) Do you see the stack segment anywhere? What about the heap? Explain.
+
+No, there is no stack or heap section in the file. The executable only
+stores things that exist before the program starts, like the code and
+the global variables. The stack and the heap only exist while the
+program is running. The OS creates the stack when it starts the process,
+and the heap gets set up and grown at runtime when the program calls
+malloc. So there is nothing about them for objdump to show.

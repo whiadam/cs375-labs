@@ -1,0 +1,50 @@
+gdb answers (from running the words program with one file argument)
+
+1) What is the value of argv?
+
+(char **) 0x7fffffffcc08
+
+So argv itself is just a pointer. It points to an array of char pointers
+that sits near the top of the stack. Each entry in that array points to
+one of the command line arguments.
+
+2) What is pointed to by argv?
+
+argv[0] is 0x7fffffffd21a and it points to the string
+"/home/user/aliosystems/CS375-A1-tools_limits/hw0/words/words"
+which is just the path of the program I ran. The next entries are the
+actual arguments, so argv[1] was my input file.
+
+3) What is the address of the function main?
+
+print &main gave me 0x5555555553c7. That address is in the code (text)
+part of the program, which makes sense since main is code and not data.
+
+4) info stack
+
+It printed:
+#0  main (argc=2, argv=0x7fffffffcc08) at main.c:132
+
+This is a list of the stack frames that are active right now. There is
+only one line because I was stopped inside main and main hasn't called
+anything yet. If I broke somewhere deeper, like inside num_words, I would
+see num_words as frame #0 and main under it as frame #1.
+
+5) info frame
+
+This shows the details of the current stack frame. Mine said the frame
+starts at 0x7fffffffcaf0, that rip (the program counter) is inside main,
+and that the saved rip is 0x7ffff7c2a1ca. The saved rip is the return
+address, so it's where the program goes back to when main returns (some
+libc code that called main). It also shows where the old rbp and rip got
+saved on the stack, and where the arguments and locals live.
+
+6) info registers
+
+This dumps all the cpu registers. Ones I recognized:
+- rip = 0x5555555553e9, the instruction pointer, it's an address inside
+  main since that's where I'm stopped
+- rsp = 0x7fffffffcab0, the stack pointer, top of the stack
+- rbp = 0x7fffffffcae0, the base of the current frame
+- rdi = 2, which is argc (first argument goes in rdi on x86-64)
+- rsi = 0x7fffffffcc08, which is argv (second argument goes in rsi)

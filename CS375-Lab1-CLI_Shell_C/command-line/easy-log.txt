@@ -1,0 +1,13 @@
+=== Easy Command Line Log ===
+$ pwd
+/workspaces/aliosystems
+$ ls
+command-line-easy
+easy-log.txt
+hello-copy.txt
+$ cat hello-copy.txt
+Hello, Linux!
+$ echo Test > test.txt && cat test.txt
+Test
+$ whoami
+codespace

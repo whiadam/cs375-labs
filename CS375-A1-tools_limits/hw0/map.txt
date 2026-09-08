@@ -1,0 +1,62 @@
+map answers
+
+Output I got from ./map (ran with ASLR off so the numbers are stable):
+
+main @ 0x555555555189  recur @ 0x55555555528a
+main stack: 0x7fffffffcb74
+static data: 0x555555558010
+Heap: malloc 1: 0x55555555a2b0
+Heap: malloc 2: 0x55555555a320
+recur call 3: stack@ 0x7fffffffcb44
+recur call 2: stack@ 0x7fffffffcb14
+recur call 1: stack@ 0x7fffffffcae4
+recur call 0: stack@ 0x7fffffffcab4
+
+1) Which of the addresses from the output are defined in the executable,
+and which section is each in?
+
+Running objdump -D map:
+- main is defined in the executable, in .text at offset 0x1189
+- recur is also in .text, at offset 0x128a
+- the static data (the "stuff" variable) is in .data at offset 0x4010
+(the running addresses are just these offsets plus the load base
+0x555555554000)
+
+The stack addresses and the two malloc addresses are NOT anywhere in the
+executable. They only exist once the program is running.
+
+2) List of the important segments and what they are used for:
+
+.text   - the actual machine code of the program
+.rodata - read only constants, like string literals
+.data   - global/static variables that start with a value (like stuff=7)
+.bss    - global/static variables with no initial value (like foo),
+          the OS just zeroes this out, it takes no space in the file
+heap    - memory the program asks for at runtime with malloc
+stack   - local variables, function arguments, return addresses, one
+          frame per active function call
+
+3) What direction is the stack growing in?
+
+Downward. Each recur call has a lower address than the one before it
+(0x...cb44, then 0x...cb14, then 0x...cae4, ...). So deeper calls =
+smaller addresses.
+
+4) How large is the stack frame for each recursive call?
+
+0x7fffffffcb44 - 0x7fffffffcb14 = 0x30, so each frame is 48 bytes.
+
+5) Where is the heap? What direction is it growing in?
+
+The heap is at 0x55555555a2b0, which is a low address right above the
+program's data section, and way below the stack (0x7fff...). The second
+malloc got a higher address than the first one, so the heap grows
+upward, the opposite direction of the stack.
+
+6) Are the two malloc()ed areas contiguous?
+
+Not quite. The addresses are 0x5555...a2b0 and 0x5555...a320, which is
+0x70 = 112 bytes apart, but I only asked for 100 bytes. So there's some
+extra space between them. malloc keeps a little header before each block
+for bookkeeping and also rounds sizes up for alignment, which is where
+the extra bytes go.
