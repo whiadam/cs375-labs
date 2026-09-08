@@ -55,7 +55,7 @@ upward, the opposite direction of the stack.
 
 6) Are the two malloc()ed areas contiguous?
 
-Not quite. The addresses are 0x5555...a2b0 and 0x5555...a320, which is
+No. The addresses are 0x5555...a2b0 and 0x5555...a320, which is
 0x70 = 112 bytes apart, but I only asked for 100 bytes. So there's some
 extra space between them. malloc keeps a little header before each block
 for bookkeeping and also rounds sizes up for alignment, which is where
