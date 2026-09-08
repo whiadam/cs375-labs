@@ -1,4 +1,0 @@
-File counts in CS375-Lab1-CLI_Shell_C:
-.txt files: 9
-.sh files: 4
-.c files: 6
