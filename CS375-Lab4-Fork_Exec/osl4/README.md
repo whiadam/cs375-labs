@@ -42,7 +42,3 @@ You can also compile one file at a time like the lab shows:
   ls -l, not just single words. It also stops if you press Ctrl+D.
 - The exec lines are followed by an error print. That code only runs if exec
   failed, because a working exec replaces the whole program.
-
-## Done
-
-All 5 exercises are done and build with no warnings.

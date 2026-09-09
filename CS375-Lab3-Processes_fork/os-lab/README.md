@@ -74,7 +74,3 @@ gone, so run ps again to show that.
 - The parent has to close both ends of the pipe or grep waits forever.
 - Children use _exit() after fork() instead of exit() so the buffers do not get
   flushed twice.
-
-## Done
-
-I did all 5 demos and all 10 challenges. Everything builds with no warnings.
