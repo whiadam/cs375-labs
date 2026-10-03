@@ -1,0 +1,15 @@
+/part2-process-api/q1
+/part2-process-api/q2
+/part2-process-api/q3
+/part2-process-api/q4
+/part2-process-api/q5
+/part2-process-api/q6
+/part2-process-api/q2.output
+/part3-thread-api/main-race
+/part3-thread-api/main-race-removed
+/part3-thread-api/main-race-lock-one
+/part3-thread-api/main-race-lock-both
+/part3-thread-api/main-deadlock
+/part3-thread-api/main-deadlock-global
+/part3-thread-api/main-signal
+/part3-thread-api/main-signal-cv
