@@ -1,0 +1,192 @@
+Thread pool server running on port 9000 with 4 workers, max 16 connections
+[conn] accepted 127.0.0.1:59666
+[pool] queued socket 4 | queue length 1 | active workers 0
+[pool] worker 0 took socket 4 after waiting 0.77 ms | queue length 0 | active workers 1
+[conn] accepted 127.0.0.1:59672
+[pool] queued socket 5 | queue length 1 | active workers 1
+[pool] worker 1 took socket 5 after waiting 0.101 ms | queue length 0 | active workers 2
+[get] 127.0.0.1:59672 requested 'small.bin' size 1000000 bytes
+[conn] accepted 127.0.0.1:59680
+[pool] queued socket 6 | queue length 1 | active workers 2
+[conn] accepted 127.0.0.1:59690
+[pool] queued socket 8 | queue length 2 | active workers 2
+[conn] accepted 127.0.0.1:59694
+[pool] queued socket 9 | queue length 3 | active workers 2
+[pool] worker 2 took socket 6 after waiting 1.458 ms | queue length 2 | active workers 3
+[pool] worker 3 took socket 8 after waiting 1.471 ms | queue length 1 | active workers 4
+[conn] accepted 127.0.0.1:59710
+[pool] queued socket 10 | queue length 2 | active workers 4
+[conn] accepted 127.0.0.1:59712
+[pool] queued socket 11 | queue length 3 | active workers 4
+[get] 127.0.0.1:59690 requested 'small.bin' size 1000000 bytes
+[conn] accepted 127.0.0.1:59724
+[pool] queued socket 12 | queue length 4 | active workers 4
+[get] 127.0.0.1:59680 requested 'small.bin' size 1000000 bytes
+[conn] accepted 127.0.0.1:59728
+[pool] queued socket 14 | queue length 5 | active workers 4
+[conn] accepted 127.0.0.1:59744
+[pool] queued socket 16 | queue length 6 | active workers 4
+[conn] accepted 127.0.0.1:59750
+[pool] queued socket 17 | queue length 7 | active workers 4
+[get] 127.0.0.1:59672 done 'small.bin' 1000000 bytes in 0.0292291 s sha256=2910e4cb556905c03f2ce614f76cff2c361ef606c5bbf077ac4a1eb31519e896
+[pool] worker 1 finished in 30.548 ms | jobs done 1 | avg service 30.548 ms | avg wait 0.101 ms
+[pool] worker 1 took socket 9 after waiting 25.7 ms | queue length 6 | active workers 4
+[get] 127.0.0.1:59694 requested 'small.bin' size 1000000 bytes
+[get] 127.0.0.1:59690 done 'small.bin' 1000000 bytes in 0.0241539 s sha256=2910e4cb556905c03f2ce614f76cff2c361ef606c5bbf077ac4a1eb31519e896
+[pool] worker 3 finished in 26.016 ms | jobs done 2 | avg service 28.282 ms | avg wait 0.786 ms
+[pool] worker 3 took socket 10 after waiting 25.876 ms | queue length 5 | active workers 4
+[get] 127.0.0.1:59710 requested 'small.bin' size 1000000 bytes
+[get] 127.0.0.1:59680 done 'small.bin' 1000000 bytes in 0.032896 s sha256=2910e4cb556905c03f2ce614f76cff2c361ef606c5bbf077ac4a1eb31519e896
+[pool] worker 2 finished in 39.509 ms | jobs done 3 | avg service 32.0243 ms | avg wait 1.01 ms
+[pool] worker 2 took socket 11 after waiting 37.769 ms | queue length 4 | active workers 4
+[get] 127.0.0.1:59712 requested 'small.bin' size 1000000 bytes
+[get] 127.0.0.1:59712 done 'small.bin' 1000000 bytes in 0.0222672 s sha256=2910e4cb556905c03f2ce614f76cff2c361ef606c5bbf077ac4a1eb31519e896
+[pool] worker 2 finished in 23.345 ms | jobs done 4 | avg service 29.8545 ms | avg wait 10.1997 ms
+[pool] worker 2 took socket 12 after waiting 58.029 ms | queue length 3 | active workers 4
+[get] 127.0.0.1:59724 requested 'small.bin' size 1000000 bytes
+[get] 127.0.0.1:59694 done 'small.bin' 1000000 bytes in 0.0382519 s sha256=2910e4cb556905c03f2ce614f76cff2c361ef606c5bbf077ac4a1eb31519e896
+[pool] worker 1 finished in 41.002 ms | jobs done 5 | avg service 32.084 ms | avg wait 13.2998 ms
+[pool] worker 1 took socket 14 after waiting 56.228 ms | queue length 2 | active workers 4
+[get] 127.0.0.1:59728 requested 'small.bin' size 1000000 bytes
+[get] 127.0.0.1:59710 done 'small.bin' 1000000 bytes in 0.0435744 s sha256=2910e4cb556905c03f2ce614f76cff2c361ef606c5bbf077ac4a1eb31519e896
+[pool] worker 3 finished in 43.648 ms | jobs done 6 | avg service 34.0113 ms | avg wait 15.3958 ms
+[pool] worker 3 took socket 16 after waiting 60.021 ms | queue length 1 | active workers 4
+[get] 127.0.0.1:59744 requested 'small.bin' size 1000000 bytes
+[get] 127.0.0.1:59724 done 'small.bin' 1000000 bytes in 0.0293356 s sha256=2910e4cb556905c03f2ce614f76cff2c361ef606c5bbf077ac4a1eb31519e896
+[pool] worker 2 finished in 31.222 ms | jobs done 7 | avg service 33.6129 ms | avg wait 21.4863 ms
+[pool] worker 2 took socket 17 after waiting 81.618 ms | queue length 0 | active workers 4
+[get] 127.0.0.1:59750 requested 'small.bin' size 1000000 bytes
+[get] 127.0.0.1:59728 done 'small.bin' 1000000 bytes in 0.0298741 s sha256=2910e4cb556905c03f2ce614f76cff2c361ef606c5bbf077ac4a1eb31519e896
+[pool] worker 1 finished in 29.945 ms | jobs done 8 | avg service 33.1544 ms | avg wait 25.829 ms
+[get] 127.0.0.1:59744 done 'small.bin' 1000000 bytes in 0.0301825 s sha256=2910e4cb556905c03f2ce614f76cff2c361ef606c5bbf077ac4a1eb31519e896
+[pool] worker 3 finished in 30.262 ms | jobs done 9 | avg service 32.833 ms | avg wait 29.6281 ms
+[get] 127.0.0.1:59750 done 'small.bin' 1000000 bytes in 0.0211127 s sha256=2910e4cb556905c03f2ce614f76cff2c361ef606c5bbf077ac4a1eb31519e896
+[pool] worker 2 finished in 21.197 ms | jobs done 10 | avg service 31.6694 ms | avg wait 34.8271 ms
+Thread pool server running on port 9000 with 4 workers, max 16 connections
+[conn] accepted 127.0.0.1:46344
+[pool] queued socket 4 | queue length 1 | active workers 0
+[pool] worker 0 took socket 4 after waiting 0.069 ms | queue length 0 | active workers 1
+[conn] accepted 127.0.0.1:46352
+[pool] queued socket 5 | queue length 1 | active workers 1
+[conn] accepted 127.0.0.1:46368
+[pool] queued socket 6 | queue length 2 | active workers 1
+[conn] accepted 127.0.0.1:46382
+[pool] queued socket 7 | queue length 3 | active workers 1
+[pool] worker 2 took socket 5 after waiting 1.677 ms | queue length 2 | active workers 2
+[get] 127.0.0.1:46352 requested 'small.bin' size 1000000 bytes
+[pool] worker 1 took socket 6 after waiting 1.804 ms | queue length 1 | active workers 3
+[get] 127.0.0.1:46368 requested 'small.bin' size 1000000 bytes
+[pool] worker 3 took socket 7 after waiting 1.637 ms | queue length 0 | active workers 4
+[get] 127.0.0.1:46382 requested 'small.bin' size 1000000 bytes
+[conn] accepted 127.0.0.1:46386
+[pool] queued socket 8 | queue length 1 | active workers 4
+[conn] accepted 127.0.0.1:46402
+[pool] queued socket 12 | queue length 2 | active workers 4
+[conn] accepted 127.0.0.1:46410
+[pool] queued socket 13 | queue length 3 | active workers 4
+[conn] accepted 127.0.0.1:46426
+[pool] queued socket 14 | queue length 4 | active workers 4
+[conn] accepted 127.0.0.1:46436
+[pool] queued socket 15 | queue length 5 | active workers 4
+[conn] accepted 127.0.0.1:46448
+[pool] queued socket 16 | queue length 6 | active workers 4
+[conn] accepted 127.0.0.1:46462
+[pool] queued socket 17 | queue length 7 | active workers 4
+[get] 127.0.0.1:46352 done 'small.bin' 1000000 bytes in 0.024311 s sha256=2910e4cb556905c03f2ce614f76cff2c361ef606c5bbf077ac4a1eb31519e896
+[pool] worker 2 finished in 24.46 ms | jobs done 1 | avg service 24.46 ms | avg wait 1.677 ms
+[pool] worker 2 took socket 8 after waiting 20.302 ms | queue length 6 | active workers 4
+[get] 127.0.0.1:46386 requested 'small.bin' size 1000000 bytes
+[get] 127.0.0.1:46382 done 'small.bin' 1000000 bytes in 0.0429323 s sha256=2910e4cb556905c03f2ce614f76cff2c361ef606c5bbf077ac4a1eb31519e896
+[pool] worker 3 finished in 43.072 ms | jobs done 2 | avg service 33.766 ms | avg wait 1.657 ms
+[pool] worker 3 took socket 12 after waiting 38.491 ms | queue length 5 | active workers 4
+[get] 127.0.0.1:46402 requested 'small.bin' size 1000000 bytes
+[get] 127.0.0.1:46386 done 'small.bin' 1000000 bytes in 0.0205655 s sha256=2910e4cb556905c03f2ce614f76cff2c361ef606c5bbf077ac4a1eb31519e896
+[pool] worker 2 finished in 20.645 ms | jobs done 3 | avg service 29.3923 ms | avg wait 7.872 ms
+[pool] worker 2 took socket 13 after waiting 32.82 ms | queue length 4 | active workers 4
+[get] 127.0.0.1:46410 requested 'small.bin' size 1000000 bytes
+[get] 127.0.0.1:46368 done 'small.bin' 1000000 bytes in 0.0465985 s sha256=2910e4cb556905c03f2ce614f76cff2c361ef606c5bbf077ac4a1eb31519e896
+[pool] worker 1 finished in 46.711 ms | jobs done 4 | avg service 33.722 ms | avg wait 6.355 ms
+[pool] worker 1 took socket 14 after waiting 35.218 ms | queue length 3 | active workers 4
+[get] 127.0.0.1:46426 requested 'small.bin' size 1000000 bytes
+[get] 127.0.0.1:46410 done 'small.bin' 1000000 bytes in 0.027145 s sha256=2910e4cb556905c03f2ce614f76cff2c361ef606c5bbf077ac4a1eb31519e896
+[pool] worker 2 finished in 27.439 ms | jobs done 5 | avg service 32.4654 ms | avg wait 11.648 ms
+[pool] worker 2 took socket 15 after waiting 60.045 ms | queue length 2 | active workers 4
+[get] 127.0.0.1:46436 requested 'small.bin' size 1000000 bytes
+[get] 127.0.0.1:46426 done 'small.bin' 1000000 bytes in 0.0394786 s sha256=2910e4cb556905c03f2ce614f76cff2c361ef606c5bbf077ac4a1eb31519e896
+[pool] worker 1 finished in 41.415 ms | jobs done 6 | avg service 33.957 ms | avg wait 15.5763 ms
+[pool] worker 1 took socket 16 after waiting 75.242 ms | queue length 1 | active workers 4
+[get] 127.0.0.1:46448 requested 'small.bin' size 1000000 bytes
+[get] 127.0.0.1:46402 done 'small.bin' 1000000 bytes in 0.0442926 s sha256=2910e4cb556905c03f2ce614f76cff2c361ef606c5bbf077ac4a1eb31519e896
+[pool] worker 3 finished in 46.547 ms | jobs done 7 | avg service 35.7556 ms | avg wait 18.8499 ms
+[pool] worker 3 took socket 17 after waiting 76.108 ms | queue length 0 | active workers 4
+[get] 127.0.0.1:46462 requested 'small.bin' size 1000000 bytes
+[get] 127.0.0.1:46436 done 'small.bin' 1000000 bytes in 0.0190711 s sha256=2910e4cb556905c03f2ce614f76cff2c361ef606c5bbf077ac4a1eb31519e896
+[pool] worker 2 finished in 19.214 ms | jobs done 8 | avg service 33.6879 ms | avg wait 23.9992 ms
+[get] 127.0.0.1:46448 done 'small.bin' 1000000 bytes in 0.0267578 s sha256=2910e4cb556905c03f2ce614f76cff2c361ef606c5bbf077ac4a1eb31519e896
+[pool] worker 1 finished in 26.858 ms | jobs done 9 | avg service 32.929 ms | avg wait 29.6929 ms
+[get] 127.0.0.1:46462 done 'small.bin' 1000000 bytes in 0.0282796 s sha256=2910e4cb556905c03f2ce614f76cff2c361ef606c5bbf077ac4a1eb31519e896
+[pool] worker 3 finished in 28.772 ms | jobs done 10 | avg service 32.5133 ms | avg wait 34.3344 ms
+Thread pool server running on port 9000 with 4 workers, max 16 connections
+[conn] accepted 127.0.0.1:59364
+[pool] queued socket 4 | queue length 1 | active workers 0
+[pool] worker 0 took socket 4 after waiting 0.534 ms | queue length 0 | active workers 1
+[conn] accepted 127.0.0.1:59376
+[pool] queued socket 5 | queue length 1 | active workers 1
+[pool] worker 1 took socket 5 after waiting 0.095 ms | queue length 0 | active workers 2
+[get] 127.0.0.1:59376 requested 'small.bin' size 1000000 bytes
+[conn] accepted 127.0.0.1:59390
+[pool] queued socket 6 | queue length 1 | active workers 2
+[conn] accepted 127.0.0.1:59394
+[pool] queued socket 8 | queue length 2 | active workers 2
+[pool] worker 2 took socket 6 after waiting 0.216 ms | queue length 1 | active workers 3
+[conn] accepted 127.0.0.1:59402
+[pool] queued socket 9 | queue length 2 | active workers 3
+[pool] worker 3 took socket 8 after waiting 0.75 ms | queue length 1 | active workers 4
+[conn] accepted 127.0.0.1:59414
+[pool] queued socket 10 | queue length 2 | active workers 4
+[conn] accepted 127.0.0.1:59418
+[pool] queued socket 11 | queue length 3 | active workers 4
+[conn] accepted 127.0.0.1:59426
+[pool] queued socket 12 | queue length 4 | active workers 4
+[get] 127.0.0.1:59394 requested 'small.bin' size 1000000 bytes
+[conn] accepted 127.0.0.1:59434
+[pool] queued socket 14 | queue length 5 | active workers 4
+[conn] accepted 127.0.0.1:59440
+[pool] queued socket 15 | queue length 6 | active workers 4
+[get] 127.0.0.1:59390 requested 'small.bin' size 1000000 bytes
+[conn] accepted 127.0.0.1:59456
+[pool] queued socket 16 | queue length 7 | active workers 4
+[get] 127.0.0.1:59376 done 'small.bin' 1000000 bytes in 0.023656 s sha256=2910e4cb556905c03f2ce614f76cff2c361ef606c5bbf077ac4a1eb31519e896
+[pool] worker 1 finished in 23.899 ms | jobs done 1 | avg service 23.899 ms | avg wait 0.095 ms
+[pool] worker 1 took socket 9 after waiting 17.58 ms | queue length 6 | active workers 4
+[get] 127.0.0.1:59402 requested 'small.bin' size 1000000 bytes
+[get] 127.0.0.1:59394 done 'small.bin' 1000000 bytes in 0.0218225 s sha256=2910e4cb556905c03f2ce614f76cff2c361ef606c5bbf077ac4a1eb31519e896
+[pool] worker 3 finished in 29.571 ms | jobs done 2 | avg service 26.735 ms | avg wait 0.4225 ms
+[pool] worker 3 took socket 10 after waiting 26.262 ms | queue length 5 | active workers 4
+[get] 127.0.0.1:59414 requested 'small.bin' size 1000000 bytes
+[get] 127.0.0.1:59390 done 'small.bin' 1000000 bytes in 0.0365328 s sha256=2910e4cb556905c03f2ce614f76cff2c361ef606c5bbf077ac4a1eb31519e896
+[pool] worker 2 finished in 47.771 ms | jobs done 3 | avg service 33.747 ms | avg wait 0.353667 ms
+[pool] worker 2 took socket 11 after waiting 41.926 ms | queue length 4 | active workers 4
+[get] 127.0.0.1:59418 requested 'small.bin' size 1000000 bytes
+[get] 127.0.0.1:59402 done 'small.bin' 1000000 bytes in 0.0405664 s sha256=2910e4cb556905c03f2ce614f76cff2c361ef606c5bbf077ac4a1eb31519e896
+[pool] worker 1 finished in 42.71 ms | jobs done 4 | avg service 35.9877 ms | avg wait 4.66025 ms
+[pool] worker 1 took socket 12 after waiting 53.397 ms | queue length 3 | active workers 4
+[get] 127.0.0.1:59426 requested 'small.bin' size 1000000 bytes
+[get] 127.0.0.1:59414 done 'small.bin' 1000000 bytes in 0.0284089 s sha256=2910e4cb556905c03f2ce614f76cff2c361ef606c5bbf077ac4a1eb31519e896
+[pool] worker 3 finished in 33.119 ms | jobs done 5 | avg service 35.414 ms | avg wait 8.9806 ms
+[pool] worker 3 took socket 14 after waiting 54.534 ms | queue length 2 | active workers 4
+[get] 127.0.0.1:59434 requested 'small.bin' size 1000000 bytes
+[get] 127.0.0.1:59418 done 'small.bin' 1000000 bytes in 0.0371348 s sha256=2910e4cb556905c03f2ce614f76cff2c361ef606c5bbf077ac4a1eb31519e896
+[pool] worker 2 finished in 37.567 ms | jobs done 6 | avg service 35.7728 ms | avg wait 14.4715 ms
+[pool] worker 2 took socket 15 after waiting 76.702 ms | queue length 1 | active workers 4
+[get] 127.0.0.1:59440 requested 'small.bin' size 1000000 bytes
+[get] 127.0.0.1:59434 done 'small.bin' 1000000 bytes in 0.0255614 s sha256=2910e4cb556905c03f2ce614f76cff2c361ef606c5bbf077ac4a1eb31519e896
+[pool] worker 3 finished in 32.261 ms | jobs done 7 | avg service 35.2711 ms | avg wait 20.1947 ms
+[pool] worker 3 took socket 16 after waiting 82.94 ms | queue length 0 | active workers 4
+[get] 127.0.0.1:59456 requested 'small.bin' size 1000000 bytes
+[get] 127.0.0.1:59426 done 'small.bin' 1000000 bytes in 0.0377954 s sha256=2910e4cb556905c03f2ce614f76cff2c361ef606c5bbf077ac4a1eb31519e896
+[pool] worker 1 finished in 37.893 ms | jobs done 8 | avg service 35.5989 ms | avg wait 24.345 ms
+[get] 127.0.0.1:59456 done 'small.bin' 1000000 bytes in 0.0175054 s sha256=2910e4cb556905c03f2ce614f76cff2c361ef606c5bbf077ac4a1eb31519e896
+[pool] worker 3 finished in 17.589 ms | jobs done 9 | avg service 33.5978 ms | avg wait 30.8556 ms
+[get] 127.0.0.1:59440 done 'small.bin' 1000000 bytes in 0.0282695 s sha256=2910e4cb556905c03f2ce614f76cff2c361ef606c5bbf077ac4a1eb31519e896
+[pool] worker 2 finished in 28.348 ms | jobs done 10 | avg service 33.0728 ms | avg wait 35.4402 ms
