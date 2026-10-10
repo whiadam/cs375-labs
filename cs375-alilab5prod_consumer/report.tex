@@ -1,0 +1,101 @@
+\documentclass{article}
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage[utf8]{inputenc}
+
+\lstset{
+    basicstyle=\ttfamily\small,
+    breaklines=true,
+    frame=single,
+    language=C,
+    keywordstyle=\color{blue},
+    commentstyle=\color{green!50!black},
+    stringstyle=\color{red}
+}
+
+\begin{document}
+
+\title{Operating Systems Lab Assignment: Concurrency with Semaphores, Critical Sections, and Monitor Locks}
+\author{adam white}
+\date{\today}
+\maketitle
+
+\section{Introduction}
+This report covers the six programs from the concurrency lab. Each one uses semaphores, mutexes, or condition variables to keep threads from messing up shared data.
+
+\section{Exercise 1: Producer-Consumer in C}
+\lstinputlisting{producer_consumer.c}
+\textbf{Explanation}: The empty semaphore starts at 5 and counts open spots in the buffer. The full semaphore starts at 0 and counts items in the buffer. The producer waits on empty before adding and posts full after. The consumer waits on full before taking and posts empty after. The mutex makes sure only one thread changes the buffer at a time.
+
+\textbf{Analysis}: The producer sleeps 1 second and the consumer sleeps 2, so the producer gets ahead and the consumer finishes the last items at the end. Items came out in the same order they went in. If the semaphores were removed, the producer could overwrite items and the consumer could read an empty spot. Without the mutex, two threads could change the buffer at the same time.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{exercise1_screenshot.png}
+    \caption{Compilation and execution of producer\_consumer.c}
+\end{figure}
+
+\section{Exercise 2: Bank Account Simulation in C++}
+\lstinputlisting[language=C++]{bank_account.cpp}
+\textbf{Explanation}: Deposit and withdraw both lock the mutex so only one thread changes the balance at a time. In withdraw, cv.wait makes the thread wait until the balance is at least the amount. Deposit calls notify\_all to wake up any thread that is waiting.
+
+\textbf{Analysis}: Five threads each deposit 100 and withdraw 50. The balance went up to 600 and ended at 350, which is correct. No thread had to wait because the balance was always high enough. Without the mutex, two threads could change the balance at once and one update could be lost. Without the condition variable, the balance could go negative.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{exercise2_screenshot.png}
+    \caption{Compilation and execution of bank\_account.cpp}
+\end{figure}
+
+\section{Exercise 3: Reader-Writer Problem in C}
+\lstinputlisting{reader_writer.c}
+\textbf{Explanation}: The mutex semaphore protects reader\_count. The first reader waits on rw\_mutex to block writers, and the last reader posts it so writers can go. Writers wait on rw\_mutex, so only one writer can use the data and no readers can be in at the same time.
+
+\textbf{Analysis}: This is readers-first. All three readers read 0 together, then the writers wrote 1 and 2 one at a time. If readers kept coming, a writer might never get a turn. Without the semaphores, a reader could read while a writer is changing the data, and two writers could overwrite each other.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{exercise3_screenshot.png}
+    \caption{Compilation and execution of reader\_writer.c}
+\end{figure}
+
+\section{Exercise 4: Dining Philosophers in C++}
+\lstinputlisting[language=C++]{dining_philosophers.cpp}
+\textbf{Explanation}: Each fork is a mutex and a philosopher needs two forks to eat. If everyone picked up their left fork first, they could all wait forever. The last philosopher swaps the order, so everyone picks up the lower numbered fork first. This stops the circle of waiting, so there is no deadlock.
+
+\textbf{Analysis}: Each philosopher ate 3 times for 15 lines total. In my run they went in the order 1, 3, 0, 2, 4 each round. Neighbors never ate at the same time since they share a fork. Without the swap, the program could freeze.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{exercise4_screenshot.png}
+    \caption{Compilation and execution of dining\_philosophers.cpp}
+\end{figure}
+
+\section{Exercise 5: Sleeping Barber Problem in C}
+\lstinputlisting{sleeping_barber.c}
+\textbf{Explanation}: The customers semaphore counts waiting customers, and the barber sleeps on it when no one is there. The chairs semaphore starts at 3 and counts open chairs. The barber semaphore tells a customer their haircut is done. A customer uses sem\_trywait on chairs and leaves if none are open. If it gets a chair, it posts customers to wake the barber and waits on barber. The mutex keeps two customers from checking the chairs at the same time.
+
+\textbf{Analysis}: Customers come every second and a haircut takes 2 seconds. With 3 chairs, all five customers got haircuts and nobody left. The barber thread never ends, but the program still exits when main returns. Without the chairs semaphore there would be no limit on waiting customers.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{exercise5_screenshot.png}
+    \caption{Compilation and execution of sleeping\_barber.c}
+\end{figure}
+
+\section{Exercise 6: Bounded Buffer with Condition Variables in C++}
+\lstinputlisting[language=C++]{bounded_buffer.cpp}
+\textbf{Explanation}: The producer waits on not\_full until the queue has room, adds an item, and notifies not\_empty. The consumer waits on not\_empty until there is an item, takes it, and notifies not\_full. The wait call releases the lock while sleeping so the other thread can run.
+
+\textbf{Analysis}: The output was the same as Exercise 1 since the timing is the same. In Exercise 1 the semaphores keep the counts. Here the condition variables check the actual queue size. This version is easier to read and uses one mutex, but a thread has to hold the lock to wait. Semaphores are simpler when you only need to count.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\textwidth]{exercise6_screenshot.png}
+    \caption{Compilation and execution of bounded\_buffer.cpp}
+\end{figure}
+
+\end{document}
