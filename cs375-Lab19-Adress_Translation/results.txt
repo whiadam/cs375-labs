@@ -1,0 +1,110 @@
+Stress test: 100 addresses, valid ratio 0.7, policy LRU
+Address 0: (0,0,2,839,W) [expected valid] Physical=1839, Latency=4, page fault + replacement
+Address 1: (0,1,1,315,W) [expected valid] Physical=2315, Latency=3, page fault + replacement
+Address 2: (1,0,0,543,W) [expected invalid] Failed: Protection Violation: Cannot write to read-only segment 1
+Address 3: (1,1,0,56,R) [expected valid] Physical=10056, Latency=4, page fault + replacement
+Address 4: (0,1,0,763,W) [expected valid] Physical=763, Latency=5, page fault + replacement
+Address 5: (1,0,2,38,R) [expected valid] Physical=9038, Latency=5
+Address 6: (1,0,4,260,R) [expected invalid] Failed: Page Fault: Page 4 exceeds limit 4 in directory 0 of segment 1
+Address 7: (5,1,0,844,R) [expected invalid] Failed: Segmentation Fault: Invalid segment 5, max 2
+Address 8: (0,0,2,986,R) [expected valid] Physical=1986, Latency=2
+Address 9: (0,3,1,813,R) [expected invalid] Failed: Directory Fault: Invalid directory 3 in segment 0, max 1
+Address 10: (0,0,2,442,R) [expected valid] Physical=1442, Latency=4
+Address 11: (1,1,0,258,R) [expected valid] Physical=10258, Latency=1
+Address 12: (2,0,0,674,W) [expected valid] Physical=17674, Latency=5
+Address 13: (0,1,0,410,W) [expected valid] Physical=410, Latency=2
+Address 14: (2,0,5,556,R) [expected invalid] Failed: Page Fault: Page 5 exceeds limit 4 in directory 0 of segment 2
+Address 15: (0,0,2,103,W) [expected valid] Physical=1103, Latency=2
+Address 16: (0,1,0,372,R) [expected valid] Physical=372, Latency=5
+Address 17: (0,0,1,323,R) [expected valid] Physical=2323, Latency=2, page fault + replacement
+Address 18: (0,0,3,178,W) [expected valid] Physical=3178, Latency=2, page fault + replacement
+Address 19: (0,1,0,445,W) [expected valid] Physical=445, Latency=5
+Address 20: (1,1,0,776,R) [expected valid] Physical=10776, Latency=4
+Address 21: (2,1,3,192,W) [expected valid] Physical=17192, Latency=5, page fault + replacement
+Address 22: (1,0,0,891,R) [expected valid] Physical=7891, Latency=1, page fault + replacement
+Address 23: (1,0,0,324,W) [expected invalid] Failed: Protection Violation: Cannot write to read-only segment 1
+Address 24: (0,0,0,385,R) [expected valid] Physical=2385, Latency=1, page fault + replacement
+Address 25: (0,0,0,777,R) [expected valid] Physical=2777, Latency=1
+Address 26: (0,0,2,617,R) [expected valid] Physical=3617, Latency=2, page fault + replacement
+Address 27: (1,2,0,125,R) [expected invalid] Failed: Directory Fault: Invalid directory 2 in segment 1, max 1
+Address 28: (0,0,2,642,W) [expected valid] Physical=3642, Latency=1
+Address 29: (0,1,0,487,R) [expected valid] Physical=487, Latency=4
+Address 30: (2,0,1,771,R) [expected valid] Physical=16771, Latency=5, page fault + replacement
+Address 31: (2,0,0,985,W) [expected valid] Physical=17985, Latency=2, page fault + replacement
+Address 32: (0,1,0,14,R) [expected valid] Physical=14, Latency=3
+Address 33: (0,1,0,592,R) [expected valid] Physical=592, Latency=2
+Address 34: (2,0,2,949,R) [expected valid] Physical=13949, Latency=5, page fault + replacement
+Address 35: (1,3,0,408,W) [expected invalid] Failed: Directory Fault: Invalid directory 3 in segment 1, max 1
+Address 36: (1,0,1,315,R) [expected valid] Physical=8315, Latency=1, page fault + replacement
+Address 37: (0,0,3,721,W) [expected valid] Physical=3721, Latency=1, page fault + replacement
+Address 38: (1,1,0,282,R) [expected valid] Physical=10282, Latency=3, page fault + replacement
+Address 39: (3,0,3,331,W) [expected invalid] Failed: Segmentation Fault: Invalid segment 3, max 2
+Address 40: (1,0,2,347,R) [expected valid] Physical=11347, Latency=2, page fault + replacement
+Address 41: (2,1,6,440,R) [expected invalid] Failed: Page Fault: Page 6 exceeds limit 4 in directory 1 of segment 2
+Address 42: (4,1,1,649,W) [expected invalid] Failed: Segmentation Fault: Invalid segment 4, max 2
+Address 43: (0,1,1,139,R) [expected valid] Physical=139, Latency=3, page fault + replacement
+Address 44: (1,0,0,203,W) [expected invalid] Failed: Protection Violation: Cannot write to read-only segment 1
+Address 45: (1,0,0,884,W) [expected invalid] Failed: Protection Violation: Cannot write to read-only segment 1
+Address 46: (2,1,3,66,W) [expected valid] Physical=13066, Latency=4, page fault + replacement
+Address 47: (1,1,0,752,R) [expected valid] Physical=10752, Latency=4
+Address 48: (1,1,0,615,R) [expected valid] Physical=10615, Latency=5
+Address 49: (1,1,0,152,R) [expected valid] Physical=10152, Latency=2
+Address 50: (2,0,6,20,W) [expected invalid] Failed: Page Fault: Page 6 exceeds limit 4 in directory 0 of segment 2
+Address 51: (1,3,3,363,R) [expected invalid] Failed: Directory Fault: Invalid directory 3 in segment 1, max 1
+Address 52: (2,3,3,511,W) [expected invalid] Failed: Directory Fault: Invalid directory 3 in segment 2, max 1
+Address 53: (2,1,1,1081,R) [expected invalid] Failed: Offset Fault: Offset 1081 exceeds page size 1000
+Address 54: (2,1,4,708,R) [expected invalid] Failed: Page Fault: Page 4 exceeds limit 4 in directory 1 of segment 2
+Address 55: (1,0,3,447,R) [expected valid] Physical=8447, Latency=1, page fault + replacement
+Address 56: (2,1,1,371,R) [expected valid] Physical=15371, Latency=3, page fault + replacement
+Address 57: (1,0,0,492,W) [expected invalid] Failed: Protection Violation: Cannot write to read-only segment 1
+Address 58: (1,1,2,942,R) [expected invalid] Failed: Page Fault: Page 2 exceeds limit 1 in directory 1 of segment 1
+Address 59: (2,1,0,253,W) [expected valid] Physical=17253, Latency=5, page fault + replacement
+Address 60: (0,1,0,218,W) [expected valid] Physical=218, Latency=2, page fault + replacement
+Address 61: (2,0,5,318,R) [expected invalid] Failed: Page Fault: Page 5 exceeds limit 4 in directory 0 of segment 2
+Address 62: (0,2,1,438,W) [expected invalid] Failed: Directory Fault: Invalid directory 2 in segment 0, max 1
+Address 63: (0,0,2,169,W) [expected valid] Physical=1169, Latency=4, page fault + replacement
+Address 64: (2,0,2,837,W) [expected valid] Physical=16837, Latency=5, page fault + replacement
+Address 65: (2,0,3,566,R) [expected valid] Physical=14566, Latency=2, page fault + replacement
+Address 66: (1,3,0,374,R) [expected invalid] Failed: Directory Fault: Invalid directory 3 in segment 1, max 1
+Address 67: (1,1,0,941,R) [expected valid] Physical=9941, Latency=5, page fault + replacement
+Address 68: (0,1,1,456,W) [expected valid] Physical=5456, Latency=5, page fault + replacement
+Address 69: (0,1,0,640,W) [expected valid] Physical=640, Latency=5
+Address 70: (0,1,1,840,R) [expected valid] Physical=5840, Latency=3
+Address 71: (1,0,0,400,R) [expected valid] Physical=7400, Latency=3, page fault + replacement
+Address 72: (1,3,2,958,W) [expected invalid] Failed: Directory Fault: Invalid directory 3 in segment 1, max 1
+Address 73: (4,1,0,486,W) [expected invalid] Failed: Segmentation Fault: Invalid segment 4, max 2
+Address 74: (0,0,4,364,W) [expected invalid] Failed: Page Fault: Page 4 exceeds limit 4 in directory 0 of segment 0
+Address 75: (1,0,1,993,R) [expected valid] Physical=10993, Latency=5, page fault + replacement
+Address 76: (2,0,2,1088,R) [expected invalid] Failed: Offset Fault: Offset 1088 exceeds page size 1000
+Address 77: (4,1,0,40,R) [expected invalid] Failed: Segmentation Fault: Invalid segment 4, max 2
+Address 78: (0,0,0,720,R) [expected valid] Physical=2720, Latency=3, page fault + replacement
+Address 79: (2,1,3,937,R) [expected valid] Physical=15937, Latency=4, page fault + replacement
+Address 80: (0,1,0,203,R) [expected valid] Physical=203, Latency=2
+Address 81: (0,1,1,521,R) [expected valid] Physical=5521, Latency=3
+Address 82: (1,0,0,1039,W) [expected invalid] Failed: Offset Fault: Offset 1039 exceeds page size 1000
+Address 83: (0,1,0,59,W) [expected valid] Physical=59, Latency=3
+Address 84: (0,0,0,519,W) [expected valid] Physical=2519, Latency=4
+Address 85: (1,0,0,905,W) [expected invalid] Failed: Protection Violation: Cannot write to read-only segment 1
+Address 86: (1,0,0,938,W) [expected invalid] Failed: Protection Violation: Cannot write to read-only segment 1
+Address 87: (2,1,2,218,R) [expected valid] Physical=13218, Latency=1, page fault + replacement
+Address 88: (0,1,1,1049,W) [expected invalid] Failed: Offset Fault: Offset 1049 exceeds page size 1000
+Address 89: (1,0,0,390,W) [expected invalid] Failed: Protection Violation: Cannot write to read-only segment 1
+Address 90: (2,0,0,137,W) [expected valid] Physical=16137, Latency=1, page fault + replacement
+Address 91: (2,0,2,40,W) [expected valid] Physical=15040, Latency=3, page fault + replacement
+Address 92: (2,1,5,990,R) [expected invalid] Failed: Page Fault: Page 5 exceeds limit 4 in directory 1 of segment 2
+Address 93: (0,0,0,97,W) [expected valid] Physical=2097, Latency=3
+Address 94: (2,0,1,1075,R) [expected invalid] Failed: Offset Fault: Offset 1075 exceeds page size 1000
+Address 95: (1,1,1,925,W) [expected invalid] Failed: Page Fault: Page 1 exceeds limit 1 in directory 1 of segment 1
+Address 96: (2,0,1,64,W) [expected valid] Physical=17064, Latency=2, page fault + replacement
+Address 97: (0,0,4,665,R) [expected invalid] Failed: Page Fault: Page 4 exceeds limit 4 in directory 0 of segment 0
+Address 98: (0,0,3,764,W) [expected valid] Physical=764, Latency=5, page fault + replacement
+Address 99: (2,1,3,342,R) [expected valid] Physical=13342, Latency=1, page fault + replacement
+
+Summary
+Expected valid: 63, expected invalid: 37
+Successful translations: 63
+Failed translations: 37 (37%)
+Page Fault Rate: 38%
+Replacements: 38
+Average latency: 2.94 units
+Physical Memory Utilization: 100%

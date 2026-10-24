@@ -1,0 +1,7 @@
+frames 6
+pagesize 1000
+dirsize 4
+policy LRU
+segment 0, 0, 6, RW, 0:RW, 1:RO, 4:RW
+segment 1, 6000, 5, RO, 2:RO
+segment 2, 12000, 8, RW, 7:RW
