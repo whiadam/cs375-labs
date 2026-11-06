@@ -1,0 +1,3 @@
+--- SIGINT test: 15 clients holding connections, then Ctrl+C sent to server ---
+(sent SIGINT at 02:08:37)
+opened 15 connections

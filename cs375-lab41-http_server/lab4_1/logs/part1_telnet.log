@@ -1,0 +1,4 @@
+$ telnet localhost 8080  (typed 3 lines)
+hello from telnet
+second line
+bye

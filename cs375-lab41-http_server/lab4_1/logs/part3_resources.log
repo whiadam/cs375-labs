@@ -1,0 +1,7 @@
+$ ps -o pid,nlwp,rss,vsz,%cpu,comm -p <server pid>   (idle)
+  PID NLWP   RSS    VSZ %CPU COMMAND
+ 1407   11  3640  88364  0.0 thread_pool_ser
+$ ps -o pid,nlwp,rss,vsz,%cpu,comm -p <server pid>   (with 200 clients connected)
+  PID NLWP   RSS    VSZ %CPU COMMAND
+ 1407   11  3804 612652  0.0 thread_pool_ser
+opened 200 connections

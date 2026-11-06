@@ -1,0 +1,41 @@
+$ time ./run_clients.sh 8080 10
+client 6 says hello
+client 6 says bye
+client 5 says hello
+client 5 says bye
+client 2 says hello
+client 2 says bye
+client 4 says hello
+client 4 says bye
+client 1 says hello
+client 1 says bye
+client 8 says hello
+client 8 says bye
+client 3 says hello
+client 3 says bye
+client 10 says hello
+client 10 says bye
+client 9 says hello
+client 9 says bye
+client 7 says hello
+client 7 says bye
+
+real	0m10.335s
+user	0m0.326s
+sys	0m0.061s
+
+$ time ./fast_clients.sh 8080 10
+Echo: Message 2
+Echo: Message 4
+Echo: Message 6
+Echo: Message 1
+Echo: Message 9
+Echo: Message 10
+Echo: Message 8
+Echo: Message 5
+Echo: Message 3
+Echo: Message 7
+
+real	0m1.050s
+user	0m0.022s
+sys	0m0.006s

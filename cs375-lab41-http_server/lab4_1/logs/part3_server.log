@@ -1,0 +1,265 @@
+Thread-pool echo server listening on port 8080
+[02:08:34] Client queued from 127.0.0.1
+[02:08:34] Pushed fd 4, queue size now 1
+[02:08:34] Client queued from 127.0.0.1
+[02:08:34] Pushed fd 5, queue size now 2
+[02:08:34] Worker 1 popped fd 4, queue size now 1
+[02:08:34] Worker 0 popped fd 5, queue size now 0
+[02:08:34] Worker 0 received: client 4 says hello
+
+[02:08:34] Client queued from 127.0.0.1
+[02:08:34] Pushed fd 6, queue size now 1
+[02:08:34] Worker 2 popped fd 6, queue size now 0
+[02:08:34] Client queued from 127.0.0.1
+[02:08:34] Pushed fd 7, queue size now 1
+[02:08:34] Worker 3 popped fd 7, queue size now 0
+[02:08:34] Worker 3 received: client 9 says hello
+
+[02:08:34] Client queued from 127.0.0.1
+[02:08:34] Pushed fd 8, queue size now 1
+[02:08:34] Worker 4 popped fd 8, queue size now 0
+[02:08:34] Worker 1 received: client 2 says hello
+
+[02:08:34] Client queued from 127.0.0.1
+[02:08:34] Pushed fd 9, queue size now 1
+[02:08:34] Worker 5 popped fd 9, queue size now 0
+[02:08:34] Worker 5 received: client 1 says hello
+
+[02:08:34] Client queued from 127.0.0.1
+[02:08:34] Pushed fd 10, queue size now 1
+[02:08:34] Worker 6 popped fd 10, queue size now 0
+[02:08:34] Client queued from 127.0.0.1
+[02:08:34] Pushed fd 11, queue size now 1
+[02:08:34] Worker 7 popped fd 11, queue size now 0
+[02:08:34] Worker 7 received: client 3 says hello
+
+[02:08:34] Worker 4 received: client 7 says hello
+
+[02:08:34] Client queued from 127.0.0.1
+[02:08:34] Pushed fd 12, queue size now 1
+[02:08:34] Worker 8 popped fd 12, queue size now 0
+[02:08:34] Client queued from 127.0.0.1
+[02:08:34] Pushed fd 13, queue size now 1
+[02:08:34] Worker 9 popped fd 13, queue size now 0
+[02:08:34] Client queued from 127.0.0.1
+[02:08:34] Pushed fd 14, queue size now 1
+[02:08:34] Client queued from 127.0.0.1
+[02:08:34] Pushed fd 15, queue size now 2
+[02:08:34] Client queued from 127.0.0.1
+[02:08:34] Pushed fd 16, queue size now 3
+[02:08:34] Client queued from 127.0.0.1
+[02:08:34] Pushed fd 17, queue size now 4
+[02:08:34] Worker 8 received: client 10 says hello
+
+[02:08:34] Worker 2 received: client 8 says hello
+
+[02:08:34] Client queued from 127.0.0.1
+[02:08:34] Pushed fd 18, queue size now 5
+[02:08:34] Client queued from 127.0.0.1
+[02:08:34] Pushed fd 19, queue size now 6
+[02:08:34] Worker 9 received: client 16 says hello
+
+[02:08:34] Client queued from 127.0.0.1
+[02:08:34] Pushed fd 20, queue size now 7
+[02:08:34] Worker 6 received: client 6 says hello
+
+[02:08:34] Client queued from 127.0.0.1
+[02:08:34] Pushed fd 21, queue size now 8
+[02:08:34] Client queued from 127.0.0.1
+[02:08:34] Pushed fd 22, queue size now 9
+[02:08:34] Client queued from 127.0.0.1
+[02:08:34] Pushed fd 23, queue size now 10
+[02:08:34] Worker 0 received: client 4 says bye
+
+[02:08:34] Worker 1 received: client 2 says bye
+
+[02:08:34] Worker 4 received: client 7 says bye
+
+[02:08:34] Worker 7 received: client 3 says bye
+
+[02:08:34] Worker 5 received: client 1 says bye
+
+[02:08:34] Worker 3 received: client 9 says bye
+
+[02:08:34] Worker 8 received: client 10 says bye
+
+[02:08:34] Worker 2 received: client 8 says bye
+
+[02:08:34] Worker 9 received: client 16 says bye
+
+[02:08:34] Worker 6 received: client 6 says bye
+
+[02:08:35] Worker 0 popped fd 14, queue size now 9
+[02:08:35] Worker 0 received: client 19 says hello
+
+[02:08:35] Worker 1 popped fd 15, queue size now 8
+[02:08:35] Worker 1 received: client 14 says hello
+
+[02:08:35] Worker 4 popped fd 16, queue size now 7
+[02:08:35] Worker 4 received: client 11 says hello
+
+[02:08:35] Worker 7 popped fd 17, queue size now 6
+[02:08:35] Worker 7 received: client 5 says hello
+
+[02:08:35] Worker 2 popped fd 18, queue size now 5
+[02:08:35] Worker 2 received: client 13 says hello
+
+[02:08:35] Worker 8 popped fd 19, queue size now 4
+[02:08:35] Worker 8 received: client 12 says hello
+
+[02:08:35] Worker 5 popped fd 20, queue size now 3
+[02:08:35] Worker 5 received: client 17 says hello
+
+[02:08:35] Worker 3 popped fd 21, queue size now 2
+[02:08:35] Worker 3 received: client 15 says hello
+
+[02:08:35] Worker 9 popped fd 22, queue size now 1
+[02:08:35] Worker 9 received: client 18 says hello
+
+[02:08:35] Worker 6 popped fd 23, queue size now 0
+[02:08:35] Worker 6 received: client 20 says hello
+
+[02:08:35] Worker 1 received: client 14 says bye
+
+[02:08:35] Worker 0 received: client 19 says bye
+
+[02:08:35] Worker 4 received: client 11 says bye
+
+[02:08:35] Worker 7 received: client 5 says bye
+
+[02:08:35] Worker 5 received: client 17 says bye
+
+[02:08:35] Worker 8 received: client 12 says bye
+
+[02:08:35] Worker 2 received: client 13 says bye
+
+[02:08:35] Worker 3 received: client 15 says bye
+
+[02:08:35] Worker 6 received: client 20 says bye
+
+[02:08:35] Worker 9 received: client 18 says bye
+
+[02:08:36] Client queued from 127.0.0.1
+[02:08:36] Pushed fd 24, queue size now 1
+[02:08:36] Worker 0 popped fd 24, queue size now 0
+[02:08:36] Worker 0 received: Message 1
+[02:08:36] Client queued from 127.0.0.1
+[02:08:36] Pushed fd 4, queue size now 1
+[02:08:36] Worker 1 popped fd 4, queue size now 0
+[02:08:36] Client queued from 127.0.0.1
+[02:08:36] Pushed fd 5, queue size now 1
+[02:08:36] Worker 4 popped fd 5, queue size now 0
+[02:08:36] Worker 4 received: Hello server
+[02:08:36] Client queued from 127.0.0.1
+[02:08:36] Pushed fd 4, queue size now 1
+[02:08:36] Worker 7 popped fd 4, queue size now 0
+[02:08:36] Worker 7 received: Message 4 with numbers 12345
+[02:08:36] Client queued from 127.0.0.1
+[02:08:36] Pushed fd 5, queue size now 1
+[02:08:36] Worker 5 popped fd 5, queue size now 0
+[02:08:36] Worker 5 received: spaces    in    it
+[02:08:36] Client queued from 127.0.0.1
+[02:08:36] Pushed fd 4, queue size now 1
+[02:08:36] Worker 8 popped fd 4, queue size now 0
+[02:08:36] Worker 8 received: special !@#$%^&*()
+[02:08:36] Client queued from 127.0.0.1
+[02:08:36] Pushed fd 5, queue size now 1
+[02:08:36] Worker 2 popped fd 5, queue size now 0
+[02:08:36] Worker 2 received: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+[02:08:36] Worker 2 received: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+[02:08:36] Client queued from 127.0.0.1
+[02:08:36] Pushed fd 4, queue size now 1
+[02:08:36] Worker 3 popped fd 4, queue size now 0
+[02:08:36] Worker 3 received: line one
+line two
+line three
+[02:08:36] Client queued from 127.0.0.1
+[02:08:36] Pushed fd 5, queue size now 1
+[02:08:36] Worker 6 popped fd 5, queue size now 0
+[02:08:36] Worker 6 received: Message 9
+[02:08:36] Client queued from 127.0.0.1
+[02:08:36] Pushed fd 4, queue size now 1
+[02:08:36] Worker 9 popped fd 4, queue size now 0
+[02:08:36] Worker 9 received: last message 10
+[02:08:36] Client queued from 127.0.0.1
+[02:08:36] Pushed fd 5, queue size now 1
+[02:08:36] Worker 0 popped fd 5, queue size now 0
+[02:08:36] Worker 0 received: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+[02:08:36] Worker 0 received: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+[02:08:36] Client queued from 127.0.0.1
+[02:08:36] Pushed fd 4, queue size now 1
+[02:08:36] Worker 1 popped fd 4, queue size now 0
+[02:08:36] Worker 1 received: held client 0
+
+[02:08:36] Client queued from 127.0.0.1
+[02:08:36] Pushed fd 5, queue size now 1
+[02:08:36] Worker 4 popped fd 5, queue size now 0
+[02:08:36] Worker 4 received: held client 1
+
+[02:08:36] Client queued from 127.0.0.1
+[02:08:36] Pushed fd 6, queue size now 1
+[02:08:36] Worker 7 popped fd 6, queue size now 0
+[02:08:36] Worker 7 received: held client 2
+
+[02:08:36] Client queued from 127.0.0.1
+[02:08:36] Pushed fd 7, queue size now 1
+[02:08:36] Worker 5 popped fd 7, queue size now 0
+[02:08:36] Worker 5 received: held client 3
+
+[02:08:36] Client queued from 127.0.0.1
+[02:08:36] Pushed fd 8, queue size now 1
+[02:08:36] Worker 8 popped fd 8, queue size now 0
+[02:08:36] Worker 8 received: held client 4
+
+[02:08:36] Client queued from 127.0.0.1
+[02:08:36] Pushed fd 9, queue size now 1
+[02:08:36] Worker 2 popped fd 9, queue size now 0
+[02:08:36] Worker 2 received: held client 5
+
+[02:08:36] Client queued from 127.0.0.1
+[02:08:36] Pushed fd 10, queue size now 1
+[02:08:36] Worker 3 popped fd 10, queue size now 0
+[02:08:36] Worker 3 received: held client 6
+
+[02:08:36] Client queued from 127.0.0.1
+[02:08:36] Pushed fd 11, queue size now 1
+[02:08:36] Worker 6 popped fd 11, queue size now 0
+[02:08:36] Worker 6 received: held client 7
+
+[02:08:36] Client queued from 127.0.0.1
+[02:08:36] Pushed fd 12, queue size now 1
+[02:08:36] Worker 9 popped fd 12, queue size now 0
+[02:08:36] Worker 9 received: held client 8
+
+[02:08:36] Client queued from 127.0.0.1
+[02:08:36] Pushed fd 13, queue size now 1
+[02:08:36] Worker 0 popped fd 13, queue size now 0
+[02:08:36] Worker 0 received: held client 9
+
+[02:08:36] Client queued from 127.0.0.1
+[02:08:36] Pushed fd 14, queue size now 1
+[02:08:36] Client queued from 127.0.0.1
+[02:08:36] Pushed fd 15, queue size now 2
+[02:08:36] Client queued from 127.0.0.1
+[02:08:36] Pushed fd 16, queue size now 3
+[02:08:36] Client queued from 127.0.0.1
+[02:08:36] Pushed fd 17, queue size now 4
+[02:08:36] Client queued from 127.0.0.1
+[02:08:36] Pushed fd 18, queue size now 5
+[02:08:37] SIGINT received, finishing queued clients...
+[02:08:40] Worker 1 popped fd 14, queue size now 4
+[02:08:40] Worker 1 received: held client 10
+
+[02:08:40] Worker 4 popped fd 15, queue size now 3
+[02:08:40] Worker 4 received: held client 11
+
+[02:08:40] Worker 7 popped fd 16, queue size now 2
+[02:08:40] Worker 7 received: held client 12
+
+[02:08:40] Worker 5 popped fd 17, queue size now 1
+[02:08:40] Worker 5 received: held client 13
+
+[02:08:40] Worker 8 popped fd 18, queue size now 0
+[02:08:40] Worker 8 received: held client 14
+
+[02:08:40] All workers stopped, server shut down

@@ -1,0 +1,7 @@
+=== Part 1 queuing test (one telnet-style client holds the server for 3s) ===
+Echo: client 2
+Echo: client 1
+Echo: client 3
+  client 2 finished after 2.72s
+  client 3 finished after 2.71s
+  client 1 finished after 2.72s

@@ -1,0 +1,33 @@
+==================================================
+$ curl -v --path-as-is http://localhost:8080/../../../etc/passwd
+< HTTP/1.1 404 Not Found
+body bytes: 0
+==================================================
+$ curl -v --path-as-is http://localhost:8080/..%2f..%2f..%2fetc/passwd
+< HTTP/1.1 404 Not Found
+body bytes: 0
+==================================================
+$ curl -v --path-as-is http://localhost:8080/%2e%2e/%2e%2e/%2e%2e/etc/passwd
+< HTTP/1.1 404 Not Found
+body bytes: 0
+==================================================
+$ curl -v --path-as-is http://localhost:8080/../%2e%2e/%2e%2e/etc/passwd
+< HTTP/1.1 404 Not Found
+body bytes: 0
+==================================================
+$ curl -v --path-as-is http://localhost:8080/%2E%2E%2F%2E%2E%2Fetc%2Fpasswd
+< HTTP/1.1 404 Not Found
+body bytes: 0
+==================================================
+$ curl -v --path-as-is http://localhost:8080//etc/passwd
+< HTTP/1.1 404 Not Found
+body bytes: 0
+==================================================
+$ curl -v --path-as-is http://localhost:8080/subpage.html/../../etc/passwd
+< HTTP/1.1 404 Not Found
+body bytes: 0
+==================================================
+(extra test: made a symlink www/etc_link -> /etc to check the canonical() check)
+$ curl -v http://localhost:8080/etc_link/passwd
+< HTTP/1.1 404 Not Found
+body bytes: 0

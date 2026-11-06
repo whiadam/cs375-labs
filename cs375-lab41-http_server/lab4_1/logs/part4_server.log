@@ -1,0 +1,143 @@
+HTTP server listening on port 8080, serving ./www
+[02:08:53] Connection from 127.0.0.1
+[02:08:53] Full request:
+GET / HTTP/1.1
+Host: localhost:8080
+User-Agent: curl/8.5.0
+Accept: */*
+[02:08:53] Response: 200 OK (text/html, 499 bytes)
+[02:08:53] Connection from 127.0.0.1
+[02:08:53] Full request:
+GET /index.html HTTP/1.1
+Host: localhost:8080
+User-Agent: curl/8.5.0
+Accept: */*
+[02:08:53] Response: 200 OK (text/html, 499 bytes)
+[02:08:53] Connection from 127.0.0.1
+[02:08:53] Full request:
+GET /style.css HTTP/1.1
+Host: localhost:8080
+User-Agent: curl/8.5.0
+Accept: */*
+[02:08:53] Response: 200 OK (text/css, 88 bytes)
+[02:08:53] Connection from 127.0.0.1
+[02:08:53] Full request:
+GET /logo.png HTTP/1.1
+Host: localhost:8080
+User-Agent: curl/8.5.0
+Accept: */*
+[02:08:53] Response: 200 OK (image/png, 2490 bytes)
+[02:08:53] Connection from 127.0.0.1
+[02:08:53] Full request:
+GET /subpage.html HTTP/1.1
+Host: localhost:8080
+User-Agent: curl/8.5.0
+Accept: */*
+[02:08:53] Response: 200 OK (text/html, 134 bytes)
+[02:08:53] Connection from 127.0.0.1
+[02:08:53] Full request:
+GET /missing.txt HTTP/1.1
+Host: localhost:8080
+User-Agent: curl/8.5.0
+Accept: */*
+[02:08:53] Response: 404 Not Found (text/html, 0 bytes)
+[02:08:53] Connection from 127.0.0.1
+[02:08:53] Full request:
+GET /favicon.ico HTTP/1.1
+Host: localhost:8080
+User-Agent: curl/8.5.0
+Accept: */*
+[02:08:53] Response: 404 Not Found (text/html, 0 bytes)
+[02:08:53] Connection from 127.0.0.1
+[02:08:53] Full request:
+GET /.. HTTP/1.1
+Host: localhost:8080
+User-Agent: curl/8.5.0
+Accept: */*
+[02:08:53] Response: 404 Not Found (text/html, 0 bytes)
+[02:08:53] Connection from 127.0.0.1
+[02:08:53] Full request:
+GET /?test=1 HTTP/1.1
+Host: localhost:8080
+User-Agent: curl/8.5.0
+Accept: */*
+[02:08:53] Query string ignored: test=1
+[02:08:53] Response: 200 OK (text/html, 499 bytes)
+[02:08:53] Connection from 127.0.0.1
+[02:08:53] Full request:
+GET /very/long/path/to/file.html HTTP/1.1
+Host: localhost:8080
+User-Agent: curl/8.5.0
+Accept: */*
+[02:08:53] Response: 404 Not Found (text/html, 0 bytes)
+[02:08:53] Connection from 127.0.0.1
+[02:08:53] Full request:
+GET /../../../etc/passwd HTTP/1.1
+Host: localhost:8080
+User-Agent: curl/8.5.0
+Accept: */*
+[02:08:53] Response: 404 Not Found (text/html, 0 bytes)
+[02:08:53] Connection from 127.0.0.1
+[02:08:53] Full request:
+GET /..%2f..%2f..%2fetc/passwd HTTP/1.1
+Host: localhost:8080
+User-Agent: curl/8.5.0
+Accept: */*
+[02:08:53] Response: 404 Not Found (text/html, 0 bytes)
+[02:08:53] Connection from 127.0.0.1
+[02:08:53] Full request:
+GET /%2e%2e/%2e%2e/%2e%2e/etc/passwd HTTP/1.1
+Host: localhost:8080
+User-Agent: curl/8.5.0
+Accept: */*
+[02:08:53] Response: 404 Not Found (text/html, 0 bytes)
+[02:08:53] Connection from 127.0.0.1
+[02:08:53] Full request:
+GET /../%2e%2e/%2e%2e/etc/passwd HTTP/1.1
+Host: localhost:8080
+User-Agent: curl/8.5.0
+Accept: */*
+[02:08:53] Response: 404 Not Found (text/html, 0 bytes)
+[02:08:53] Connection from 127.0.0.1
+[02:08:53] Full request:
+GET /%2E%2E%2F%2E%2E%2Fetc%2Fpasswd HTTP/1.1
+Host: localhost:8080
+User-Agent: curl/8.5.0
+Accept: */*
+[02:08:53] Response: 404 Not Found (text/html, 0 bytes)
+[02:08:53] Connection from 127.0.0.1
+[02:08:53] Full request:
+GET //etc/passwd HTTP/1.1
+Host: localhost:8080
+User-Agent: curl/8.5.0
+Accept: */*
+[02:08:53] Response: 404 Not Found (text/html, 0 bytes)
+[02:08:53] Connection from 127.0.0.1
+[02:08:53] Full request:
+GET /subpage.html/../../etc/passwd HTTP/1.1
+Host: localhost:8080
+User-Agent: curl/8.5.0
+Accept: */*
+[02:08:53] Response: 404 Not Found (text/html, 0 bytes)
+[02:08:53] Connection from 127.0.0.1
+[02:08:53] Full request:
+POST /index.html HTTP/1.1
+Host: localhost:8080
+User-Agent: curl/8.5.0
+Accept: */*
+Content-Length: 9
+Content-Type: application/x-www-form-urlencoded
+[02:08:53] Response: 400 Bad Request
+[02:08:53] Connection from 127.0.0.1
+[02:08:53] Full request:
+garbage
+[02:08:53] Response: 400 Bad Request
+[02:08:54] Connection from 127.0.0.1
+[02:08:54] Full request:
+GET /index%2Ehtml HTTP/1.1
+Host: localhost:8080
+User-Agent: curl/8.5.0
+Accept: */*
+[02:08:54] Response: 200 OK (text/html, 499 bytes)
+[02:08:54] Shutting down...
+[02:09:03] Blocked path outside www: /etc/passwd

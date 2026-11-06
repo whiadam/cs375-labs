@@ -1,0 +1,146 @@
+==================================================
+$ curl -v --path-as-is http://localhost:8080/
+> GET / HTTP/1.1
+> Host: localhost:8080
+> 
+< HTTP/1.1 200 OK
+< Content-Type: text/html
+< Content-Length: 499
+< Connection: close
+< 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Page</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Welcome to the Test Server!</h1>
+    <p>This is a simple HTML page served by your C++ server.</p>
+    <img src="/logo.png" alt="Server 
+==================================================
+$ curl -v --path-as-is http://localhost:8080/index.html
+> GET /index.html HTTP/1.1
+> Host: localhost:8080
+> 
+< HTTP/1.1 200 OK
+< Content-Type: text/html
+< Content-Length: 499
+< Connection: close
+< 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Page</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Welcome to the Test Server!</h1>
+    <p>This is a simple HTML page served by your C++ server.</p>
+    <img src="/logo.png" alt="Server 
+==================================================
+$ curl -v --path-as-is http://localhost:8080/style.css
+> GET /style.css HTTP/1.1
+> Host: localhost:8080
+> 
+< HTTP/1.1 200 OK
+< Content-Type: text/css
+< Content-Length: 88
+< Connection: close
+< 
+body { font-family: Arial, sans-serif; background-color: #f0f0f0; }
+h1 { color: #333; }
+
+==================================================
+$ curl -v --path-as-is http://localhost:8080/logo.png
+> GET /logo.png HTTP/1.1
+> Host: localhost:8080
+> 
+< HTTP/1.1 200 OK
+< Content-Type: image/png
+< Content-Length: 2490
+< Connection: close
+< 
+(binary body, 2490 bytes, matches www/logo.png: yes)
+==================================================
+$ curl -v --path-as-is http://localhost:8080/subpage.html
+> GET /subpage.html HTTP/1.1
+> Host: localhost:8080
+> 
+< HTTP/1.1 200 OK
+< Content-Type: text/html
+< Content-Length: 134
+< Connection: close
+< 
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>Subpage</h2>
+    <p>This is a subpage.</p>
+    <img src="/logo.png" alt="Logo">
+</body>
+</html>
+
+==================================================
+$ curl -v --path-as-is http://localhost:8080/missing.txt
+> GET /missing.txt HTTP/1.1
+> Host: localhost:8080
+> 
+< HTTP/1.1 404 Not Found
+< Content-Type: text/html
+< Connection: close
+< 
+
+==================================================
+$ curl -v --path-as-is http://localhost:8080/favicon.ico
+> GET /favicon.ico HTTP/1.1
+> Host: localhost:8080
+> 
+< HTTP/1.1 404 Not Found
+< Content-Type: text/html
+< Connection: close
+< 
+
+==================================================
+$ curl -v --path-as-is http://localhost:8080/..
+> GET /.. HTTP/1.1
+> Host: localhost:8080
+> 
+< HTTP/1.1 404 Not Found
+< Content-Type: text/html
+< Connection: close
+< 
+
+==================================================
+$ curl -v --path-as-is http://localhost:8080/?test=1
+> GET /?test=1 HTTP/1.1
+> Host: localhost:8080
+> 
+< HTTP/1.1 200 OK
+< Content-Type: text/html
+< Content-Length: 499
+< Connection: close
+< 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Page</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Welcome to the Test Server!</h1>
+    <p>This is a simple HTML page served by your C++ server.</p>
+    <img src="/logo.png" alt="Server 
+==================================================
+$ curl -v --path-as-is http://localhost:8080/very/long/path/to/file.html
+> GET /very/long/path/to/file.html HTTP/1.1
+> Host: localhost:8080
+> 
+< HTTP/1.1 404 Not Found
+< Content-Type: text/html
+< Connection: close
+< 
+

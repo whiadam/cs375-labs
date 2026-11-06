@@ -1,0 +1,14 @@
+[02:00:25] Echo server listening on port 8080
+[02:00:26] Client connected from 127.0.0.1
+[02:00:26] Received: typing in telnet...
+
+[02:00:29] Client disconnected, 20 bytes echoed
+[02:00:29] Client connected from 127.0.0.1
+[02:00:29] Received: client 2
+[02:00:29] Client disconnected, 8 bytes echoed
+[02:00:29] Client connected from 127.0.0.1
+[02:00:29] Received: client 1
+[02:00:29] Client disconnected, 8 bytes echoed
+[02:00:29] Client connected from 127.0.0.1
+[02:00:29] Received: client 3
+[02:00:29] Client disconnected, 8 bytes echoed

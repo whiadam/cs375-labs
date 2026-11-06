@@ -1,0 +1,80 @@
+$ time ./run_clients.sh 8080 20
+client 2 says hello
+client 4 says hello
+client 7 says hello
+client 3 says hello
+client 1 says hello
+client 9 says hello
+client 8 says hello
+client 10 says hello
+client 16 says hello
+client 6 says hello
+client 4 says bye
+client 2 says bye
+client 7 says bye
+client 3 says bye
+client 1 says bye
+client 10 says bye
+client 8 says bye
+client 9 says bye
+client 16 says bye
+client 6 says bye
+client 19 says hello
+client 14 says hello
+client 11 says hello
+client 5 says hello
+client 12 says hello
+client 17 says hello
+client 13 says hello
+client 15 says hello
+client 18 says hello
+client 20 says hello
+client 19 says bye
+client 14 says bye
+client 11 says bye
+client 5 says bye
+client 17 says bye
+client 12 says bye
+client 13 says bye
+client 15 says bye
+client 20 says bye
+client 18 says bye
+
+real	0m2.775s
+user	0m0.681s
+sys	0m0.180s
+
+$ ./client localhost 8080 "Message 1"
+Echo: Message 1
+$ ./client localhost 8080 ""
+Echo: 
+$ ./client localhost 8080 "Hello server"
+Echo: Hello server
+$ ./client localhost 8080 "Message 4 with numbers 12345"
+Echo: Message 4 with numbers 12345
+$ ./client localhost 8080 "spaces    in    it"
+Echo: spaces    in    it
+$ ./client localhost 8080 "special !@#$%^&*()"
+Echo: special !@#$%^&*()
+$ ./client localhost 8080 "AAAA...(1500 A's)"
+Echo: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+$ ./client localhost 8080 "line one\nline two\nline three"
+Echo: line one
+line two
+line three
+$ ./client localhost 8080 "Message 9"
+Echo: Message 9
+$ ./client localhost 8080 "last message 10"
+Echo: last message 10
+--- error handling ---
+$ ./client localhost abc "hi"
+Invalid port: abc
+$ ./client localhost 99999 "hi"
+Port must be between 1 and 65535
+$ ./client localhost 9999 "hi"
+connect: Connection refused
+$ ./client localhost $P
+Usage: ./client <host> <port> <message>
+--- check long message length ---
+$ ./client localhost $P "<1500 A>" | wc -c
+1507
